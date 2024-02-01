@@ -43,7 +43,7 @@ Applied in transportation and logistics for optimizing routes and minimizing tra
 ## Robotics:
 Utilized in robotics for path planning to navigate robots through environments.
 
-##Geographical Information Systems (GIS):
+## Geographical Information Systems (GIS):
 
 In GIS applications, Dijkstra's algorithm can be used for finding the shortest path between two locations on a map.
 
