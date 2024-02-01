@@ -1,49 +1,68 @@
-# Greedy-Algorithm-Implementations
+# Greedy-Algorithm
 
-## Fractional knapsack
-
-Fractional Knapsack is a classic optimization problem in computer science and combinatorial optimization. The problem involves selecting a subset of items with given values and weights to maximize the total value in a knapsack, subject to the constraint that the total weight of selected items should not exceed the knapsack's capacity.
-Unlike the 0/1 Knapsack problem, in Fractional Knapsack, fractions of items can be selected, meaning that a portion of an item can be included in the knapsack.
+A greedy problem is a type of optimization problem where a sequence of choices is made at each step with the aim of finding the overall optimal solution. At each decision point, the algorithm selects the locally optimal choice without considering the consequences of that choice on future steps. The hope is that by making these locally optimal choices, the algorithm will reach a globally optimal solution.
 
 
-# Performance of Fractional Knapsack
-
-## Time Complexity
-
-The time complexity of the greedy algorithm for the Fractional Knapsack Problem can be attributed to the following main steps:
-
-Calculating value-to-weight ratios for each item: O(n), where n is the number of items.
-Sorting the items based on the value-to-weight ratio: O(n log n) if a comparison-based sorting algorithm like QuickSort or MergeSort is used.
-Iterating through the sorted items and adding items to the knapsack: O(n).
-Therefore, the overall time complexity of the algorithm is dominated by the sorting step, making it O(n log n).
+# What Do We Do In Greedy Problems:
+In greedy problems, the general approach involves making a series of choices that appear to be the best at each step, based on some criteria or heuristic. The key concept is to make choices that seem best at the moment without reconsidering them later.
 
 
+# Examples of Greedy Problems:
 
-## Space Complexity
+## Activity Selection Problem:
+Selecting the maximum number of non-overlapping activities to maximize the overall number of completed tasks.
 
-The space complexity of the greedy algorithm is relatively low and primarily depends on the data structures used to represent the items and the knapsack.
-O(n) space is required to store the list of items.
-O(n) space is needed to store the value-to-weight ratios.
-Hence, the space complexity of the algorithm is O(n).
+## Fractional Knapsack Problem:
+Choosing items with the maximum value-to-weight ratio to fill a knapsack with a limited capacity.
+
+## Dijkstra's Algorithm:
+Finding the shortest path in a weighted graph by selecting the next vertex with the smallest distance.
+
+## Huffman Coding:
+Constructing a binary tree for efficient data compression by merging nodes with the lowest frequencies.
+
+
+# Advantages of Greedy Approach:
+
+Simplicity:
+Greedy algorithms are often simple to understand and implement.
+
+Efficiency:
+Greedy algorithms are generally computationally efficient, often with linear or near-linear time complexity.
+
+Quick Solutions:
+Greedy algorithms provide quick solutions and are suitable for solving optimization problems in real-time.
+
+# Disadvantages and Limitations:
+
+
+No Backtracking:
+Greedy algorithms make decisions based on the current state and do not reconsider choices made earlier. This lack of backtracking can lead to suboptimal solutions.
+
+No Guarantee of Optimality:
+Greedy algorithms do not always guarantee the globally optimal solution. The locally optimal choices made at each step may not lead to the best overall solution.
+
+Problem Dependency:
+The effectiveness of a greedy approach depends on the specific problem. Not all problems are well-suited for greedy strategies.
+
+# Solutions and Mitigations:
+
+## Proof of Correctness:
+Mathematical proof may be required to establish the correctness of a greedy algorithm for a specific problem.
+
+## Greedy Choice Property:
+It must be demonstrated that a locally optimal choice is globally optimal, known as the "Greedy Choice Property."
+
+## Dynamic Programming:
+In some cases, dynamic programming can be employed to overcome limitations by considering a global perspective and storing solutions to overlapping subproblems.
+
+## Local Search:
+Combining greedy algorithms with local search techniques can help refine solutions.
+
+
+In conclusion, while greedy algorithms offer simplicity and efficiency, they are not universally applicable and may require careful analysis to ensure optimality. Proofs of correctness and consideration of problem-specific characteristics are essential for successful greedy approaches. Additionally, alternatives like dynamic programming or local search may be employed to overcome limitations.
 
 
 
-# Applications:
 
-## Resource Allocation:
-Fractional Knapsack finds applications in resource allocation scenarios, such as allocating resources with varying values and weights, where fractions of resources can be utilized.
 
-## Financial Portfolio Optimization:
-In finance, Fractional Knapsack can model the problem of selecting a portfolio of investments with varying returns and risks while staying within a budget or risk tolerance.
-
-## Data Compression:
-In data compression, Fractional Knapsack can be used to optimize the storage of files with different compression ratios, aiming to maximize the overall compression efficiency.
-
-## Project Scheduling:
-When scheduling projects with different durations and benefits, Fractional Knapsack can assist in selecting projects to maximize the overall benefit within a constrained timeframe or budget.
-
-## Load Balancing:
-In computer systems, Fractional Knapsack can be applied to load balancing, where tasks with varying computation times and benefits need to be assigned to servers to optimize overall system performance.
-
-## Cutting Stock Problem:
-In manufacturing and cutting stock problems, Fractional Knapsack can be employed to determine the optimal cutting patterns for materials to meet demand while minimizing waste.
